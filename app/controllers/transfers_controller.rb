@@ -8,16 +8,15 @@ class TransfersController < ApplicationController
     params =  Utility.getJson(str)
     @transfer = Transfer.new
     @transfer.attributes = params
-    #p @transfer
 
-	respond_to do|format|
-    	if @transfer.save
-			@transfer
-    	  	format.js
-	    end
-  	end
+  	respond_to do|format|
+      	if @transfer.save
+  			@transfer
+        @country = Utility::COUNTRIES[@transfer.originatingCountry]
 
-    #render :text => "ok"
+      	  	format.js
+  	    end
+    	end
 
   end
 

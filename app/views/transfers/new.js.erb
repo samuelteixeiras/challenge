@@ -1,4 +1,8 @@
 	
 	<%	broadcast ("/new_transfer") do %>
-			console.log("test");
+		console.log("broadcast");
+
+		insertMark("<%= @country %>");
+		console.log("<%= @country %>");
+
 	<% end %>
