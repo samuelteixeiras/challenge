@@ -23,8 +23,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+#thin rack
+gem 'thin', '1.5.1'
+
 #nodeJS gem faye
-gem "faye"
+gem "faye", '0.8.9'
+
+
 gem "json"
 
 

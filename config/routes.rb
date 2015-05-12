@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :home
   root :to => 'home#index'
-
+  match 'new_transfer' => 'transfers#new', :as => :new_transfer , via: :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
