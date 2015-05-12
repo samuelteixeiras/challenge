@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  currencyFrom: MyString
+  currencyTo: MyString
+  amountSell: 1.5
+  amountBuy: 1.5
+  timePlaced: 2015-05-12 17:42:26
+  originatingCountry: MyString
+
+two:
+  currencyFrom: MyString
+  currencyTo: MyString
+  amountSell: 1.5
+  amountBuy: 1.5
+  timePlaced: 2015-05-12 17:42:26
+  originatingCountry: MyString
