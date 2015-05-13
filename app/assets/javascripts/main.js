@@ -5,9 +5,16 @@
 
 
 	jQuery(function($){
+    	$('#table_data').hide();	
+    	$('#clear_btn').hide();	
 
+		$('#clear_btn').on("click",function(){
+				deleteMarkers();
+				$('#table_data').hide();
+				$('#clear_btn').hide();	
+				$("#data").html("");
+		});	
 
-		console.log("ready");
 
 	});
 

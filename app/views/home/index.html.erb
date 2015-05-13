@@ -4,19 +4,59 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
-      html, body, #map-canvas {
+      html, body, #map-canvas, #table_data {
       	padding-left: 5%;
-      	padding-top: 5%;
-        height: 80%;
-        width: 90%;
+      	padding-top: 1%;
+        height: 90%;
+        width: 95%;
         margin: 0px;
         
+      }
+
+      #clear_btn{
+      float: right; 
       }
     </style>
     
   </head>
   <body>
+    <button class="btn btn-default" type="submit" id="clear_btn">Clear Data</button>
+    <h2>Challenge</h2>
     <div id="map-canvas"></div>
+
+    <br clear=""all>
+
+    <table id="table_data" class="table table-striped">
+        <thead>
+
+            <tr>
+                <th>User Id</th>
+                <th>Currency From</th>
+                <th>Currency To</th>
+                <th>Amount Sell</th>
+                <th>Amount Buy</th>
+                <th>Rate</th>
+                <th>Time Placed</th>
+                <th>Originating Country</th>
+            </tr>
+        </thead>
+ 
+        <tfoot>
+            <tr>
+                <th>User Id</th>
+                <th>Currency From</th>
+                <th>Currency To</th>
+                <th>Amount Sell</th>
+                <th>Amount Buy</th>
+                <th>Rate</th>
+                <th>Time Placed</th>
+                <th>Originating Country</th>
+            </tr>
+        </tfoot>
+ 
+        <tbody id="data">
+        </tbody>
+    </table>
   </body>
 </html>
 

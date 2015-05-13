@@ -5,4 +5,19 @@
 		insertMark("<%= @country %>");
 		console.log("<%= @country %>");
 
+		var new_data = 	"<tr> \
+			                <td><%= @transfer.userId %></td> \
+			                <td><%= @transfer.currencyFrom %></td> \
+			                <td><%= @transfer.currencyTo%></td> \
+			                <td><%= @transfer.amountSell%></td> \
+			                <td><%= @transfer.amountBuy %></td> \
+			                <td><%= @transfer.rate%></td> \
+			                <td><%= @transfer.timePlaced %></td> \
+			                <td><%= @transfer.originatingCountry%></td> \
+			            </tr>";
+
+		$("#data").append(new_data);
+		$('#table_data').show();	
+		$('#clear_btn').show();	
+
 	<% end %>
