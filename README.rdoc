@@ -1,9 +1,8 @@
 == README
 
- Goal
+Goal
  Expose an endpoint which can consume trade messages and show in real time. 
- 
- # Read a post request , store in postgresql, show in real time using faye
+
 
 ============================================================
 
@@ -12,10 +11,10 @@ Instalation
 
 clone the repository
 
-```ruby
+
   bundle install
   rake db:create db:migrate
-```
+
 
 Usage
 -------
@@ -23,13 +22,13 @@ Usage
 * Start rails and faye
 
 
-```ruby
-  rails s -p 3000
-```
 
-```ruby
+  rails s -p 3000
+
+
+
  bundle exec rackup faye.ru -s thin -E production
-```
+
 
 * Acess the server on http://localhost:3000
 * curl -X POST http://localhost:3000/new_transfer  -d '{"userId": "13426", "currencyFrom": "EUR", "currencyTo": "GBP", "amountSell": 100, "amountBuy": 757.10, "rate": 0.7471, "timePlaced" : "24-JAN-15 10:27:44", "originatingCountry" : "FR"}'
@@ -38,16 +37,19 @@ Usage
 # How
 1. Using ruby on rails, faye with thin to send realtime data to frontend
 2. Google maps to show the data on map
-3. Using curl to send data to server 
+3. Store the data on postgresql
+4. Using curl to send data to server 
+
+# curl request 
 
 curl -X POST http://localhost:3000/new_transfer  -d '{"userId": "13426", "currencyFrom": "EUR", "currencyTo": "GBP", "amountSell": 100, "amountBuy": 757.10, "rate": 0.7471, "timePlaced" : "24-JAN-15 10:27:44", "originatingCountry" : "FR"}'
 
 
 # See online
 
-![](http://i.imgur.com/8y4Q0fA.png)
+http://i.imgur.com/8y4Q0fA.png
 
-![](http://i.imgur.com/Cp4D7lQ.png)
+http://i.imgur.com/Cp4D7lQ.png
 
 * You can see online on http://www.samuelteixeira.com.br:3000
 * Online I have two proxy_pass on nginx for run this example.  
