@@ -7,10 +7,6 @@
 
 ============================================================
 
-![](http://i.imgur.com/8y4Q0fA.png)
-
-![](http://i.imgur.com/Cp4D7lQ.png)
-
 Instalation
 -------
 
@@ -26,6 +22,7 @@ Usage
 
 * Start rails and faye
 
+
 ```ruby
   rails s -p 3000
 ```
@@ -39,7 +36,7 @@ Usage
 
 
 # How
-1. Using ruby , faye with thin to send realtime data to frontend
+1. Using ruby on rails, faye with thin to send realtime data to frontend
 2. Google maps to show the data on map
 3. Using curl to send data to server 
 
@@ -47,6 +44,10 @@ curl -X POST http://localhost:3000/new_transfer  -d '{"userId": "13426", "curren
 
 
 # See online
+
+![](http://i.imgur.com/8y4Q0fA.png)
+
+![](http://i.imgur.com/Cp4D7lQ.png)
 
 * You can see online on http://www.samuelteixeira.com.br:3000
 * Online I have two proxy_pass on nginx for run this example.  
